@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# Build output
+_site/
+dist/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# IDE files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
