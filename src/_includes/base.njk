@@ -21,6 +21,7 @@
         gtag('js', new Date());
         gtag('config', 'G-3YCPKRBS0G');
     </script>
+    
 </head>
 <body>
     <header>
@@ -29,19 +30,21 @@
         </div>
     </header>
     <div class="banner">
-        <a href="https://wa.me/+543492604461" target="_blank" class="banner-link">
+        <a href="https://wa.me/+543492604461" target="_blank" class="banner-link" id="order-button">
             <img src="/images/banner-image.webp" alt="Order your food from Oeste Burger" class="banner-image" loading="lazy">
             <h2 class="banner-text">Tocá acá para hacer tu pedido</h2>
         </a>
-        <script>
-            document.querySelector('.order-button').addEventListener('click', function() {
-                gtag('event', 'order_button_click', {
-                    'event_category': 'engagement',
-                    'event_label': 'Order Now Button'
-                });
-            });
-        </script>
     </div>
+    
+    <!-- Google Analytics-->
+    <script>
+        document.getElementById('order-button').addEventListener('click', function() {
+            gtag('event', 'order_button_click', {
+                'event_category': 'engagement',
+                'event_label': 'Order Now Button'
+            });
+        });
+    </script>
     
     {{ content | safe }}
 </body>
