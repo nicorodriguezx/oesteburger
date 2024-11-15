@@ -1,0 +1,32 @@
+.thank-you-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    text-align: center;
+}
+
+.thank-you-page h1 {
+    font-size: 2rem;
+    color: #B22222;
+}
+
+.thank-you-page p {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 1rem 0;
+}
+
+.back-home {
+    text-decoration: none;
+    color: white;
+    background-color: #B22222;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.back-home:hover {
+    background-color: #8A2027;
+}

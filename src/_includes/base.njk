@@ -38,11 +38,20 @@
     
     <!-- Google Analytics-->
     <script>
-        document.getElementById('order-button').addEventListener('click', function() {
-            gtag('event', 'order_button_click', {
-                'event_category': 'engagement',
-                'event_label': 'Order Now Button'
-            });
+        // Ensure the Google Analytics script is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const orderButton = document.getElementById('order-button');
+            if (orderButton) {
+                orderButton.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default anchor click behavior
+                    window.open('https://wa.me/+543492604461', '_blank'); // Open WhatsApp link in a new window
+                    window.location.href = '/thanks'; // Redirect to the thanks page
+                    gtag('event', 'order_button_click', {
+                        'event_category': 'engagement',
+                        'event_label': 'Order Now Button'
+                    });
+                });
+            }
         });
     </script>
     
