@@ -14,12 +14,13 @@
     <link rel="stylesheet" href="/styles/style.css">
 
     <!-- Google Analytics tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ process.env.GOOGLE_ANALYTICS_ID }}"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YCPKRBS0G"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', '{{ process.env.GOOGLE_ANALYTICS_ID }}');
+
+        gtag('config', 'G-3YCPKRBS0G');
     </script>
     
 </head>
@@ -38,14 +39,13 @@
     
     <!-- Google Analytics-->
     <script>
-        // Ensure the Google Analytics script is loaded
         document.addEventListener('DOMContentLoaded', function() {
             const orderButton = document.getElementById('order-button');
             if (orderButton) {
                 orderButton.addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent default anchor click behavior
-                    window.open('https://wa.me/+543492604461', '_blank'); // Open WhatsApp link in a new window
-                    window.location.href = '/thanks'; // Redirect to the thanks page
+                    event.preventDefault();
+                    window.open('https://wa.me/+543492604461', '_blank'); 
+                    window.location.href = '/thanks';
                     gtag('event', 'order_button_click', {
                         'event_category': 'engagement',
                         'event_label': 'Order Now Button'
