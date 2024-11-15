@@ -14,13 +14,14 @@
     <link rel="stylesheet" href="/styles/style.css">
 
     <!-- Google Analytics tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YCPKRBS0G"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ googleAnalyticsId }}">
+    </script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-3YCPKRBS0G');
+        gtag('config', '{{ googleAnalyticsId }}');
     </script>
     
 </head>
@@ -31,7 +32,7 @@
         </div>
     </header>
     <div class="banner">
-        <a href="https://wa.me/+543492604461" target="_blank" class="banner-link" id="order-button">
+        <a href="{{ whatsappLink }}" target="_blank" class="banner-link" id="order-button">
             <img src="/images/banner-image.webp" alt="Order your food from Oeste Burger" class="banner-image" loading="lazy">
             <h2 class="banner-text">Tocá acá para hacer tu pedido</h2>
         </a>
@@ -44,7 +45,7 @@
             if (orderButton) {
                 orderButton.addEventListener('click', function(event) {
                     event.preventDefault();
-                    window.open('https://wa.me/+543492604461', '_blank'); 
+                    window.open('{{ whatsappLink }}', '_blank'); 
                     window.location.href = '/thanks';
                     gtag('event', 'order_button_click', {
                         'event_category': 'engagement',
